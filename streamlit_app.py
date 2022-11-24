@@ -30,7 +30,7 @@ a3.metric("Humidity", "86%", "4%")
 b1, b2, b3, b4 = st.columns(4)
 b1.metric("Temperature", "70 °F", "1.2 °F")
 b2.metric("Wind", "9 mph", "-8%")
-b3.metric("Humidity", "86%", "4%")
+b3.metric("Humidity", "86%", "7%")
 b4.metric("Humidity", "86%", "4%")
 
 # Row C
