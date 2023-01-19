@@ -68,20 +68,20 @@ for i in range(4):
     away_f.append(away_form)
 
 
-matches = pd.DataFrame({'Home Teams': home_t})
+matches = pd.DataFrame({'Home Teams': home_t}).set_index('Home Teams')
 matches['Away Teams'] = away_t
 
-results = pd.DataFrame({'Home Teams': home_t})
+results = pd.DataFrame({'Home Teams': home_t}).set_index('Home Teams')
 results['Home Score'] = home_g
 results['Away Score'] = away_g
 results['Away Team'] = away_t
 
-possession = pd.DataFrame({'Home Teams': home_t})
+possession = pd.DataFrame({'Home Teams': home_t}).set_index('Home Teams')
 possession['Home Posession'] = home_pos
 possession['Away Posession'] = away_pos
 possession['Away Team'] = away_t
 
-formations = pd.DataFrame({'Home Teams': home_t})
+formations = pd.DataFrame({'Home Teams': home_t}).set_index('Home Teams')
 formations['Home Formation'] = home_form
 formations['Away Formation'] = away_form
 formations['Away Team'] = away_t
