@@ -109,11 +109,18 @@ b3.dataframe(formations)
 
 
 # Row C
-plost.bar_chart(
-    data=goals_by_form,
-    bar='Formation',
-    value='Goals')
+c1, c2 = st.columns(2)
+c1 = plost.bar_chart(
+     data=goals_by_form,
+     bar='Formation',
+     value='Goals',
+     direction='horizontal')
 
+c2 = plost.bar_chart(
+     data=goals_by_form,
+     bar='Formation',
+     value='Goals',
+     direction='horizontal')
 
 # c1, c2 = st.columns((7,3))
 # with c1:
