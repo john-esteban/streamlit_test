@@ -129,7 +129,7 @@ c1=plost.bar_chart(
 d1 = st.columns(1) 
 st.markdown('Pie Plot')
 d1=plost.donut_chart(
-    data=form_freq,
+    data=form_freq_res,
     theta='Count',
     color='Formation')   
 
