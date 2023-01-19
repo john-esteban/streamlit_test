@@ -83,8 +83,8 @@ possession['A Posession'] = away_pos
 possession['Away'] = away_t
 
 formations = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
-formations['H Formation'] = home_form
-formations['A Formation'] = away_form
+formations['H Formation'] = home_f
+formations['A Formation'] = away_f
 formations['Away'] = away_t
 
 ### Here starts the web app design
