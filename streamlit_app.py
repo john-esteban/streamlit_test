@@ -71,6 +71,18 @@ for i in range(4):
 matches = pd.DataFrame({'Home Teams': home_t})
 matches['Away Teams'] = away_t
 
+results = pd.DataFrame({'Home Teams': home_t})
+results['Home Score'] = home_g
+results['Away Score'] = away_g
+results['Away Team'] = away_t
+
+possession = pd.DataFrame({'Home Teams': home_t})
+possession['Home Score'] = home_pos
+possession['Away Score'] = away_pos
+possession['Away Team'] = away_t
+
+
+
 ### Here starts the web app design
 
 #Title
@@ -84,10 +96,10 @@ a3.dataframe(matches)
 
 # Home and Away performance
 b1, b2, b3, b4 = st.columns(4)
-b1.table("Home Goals", home_g)
-b2.metric("Away Goals", away_g)
-b3.metric("Home Penalties Awarded", home_p)
-b4.metric("Away Penalties Awarded", away_p)
+b1.dataframe(results)
+b2.dataframe(possession)
+b3.dataframe(results)
+b4.dataframe(possession)
 
 # Row C
 c1, c2 = st.columns((7,3))
