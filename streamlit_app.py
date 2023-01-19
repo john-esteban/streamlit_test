@@ -90,6 +90,13 @@ formations['Away'] = away_t
 goals_by_form = pd.DataFrame({'Formation': form})
 goals_by_form['Goals'] = goals
 
+form_freq = pd.DataFrame({'Formation': form})
+series = form_freq['Formation'].value_counts()
+form_freq_res = pd.DataFrame(series)
+form_freq_res= form_freq_res.reset_index()  
+form_freq_res.columns = ['Formation', 'Count']
+
+
 ### Here starts the web app design
 
 #Title
@@ -97,15 +104,12 @@ st.title("World Cup 2022 Matchday Stats")
 
 # Row A
 a1, a2, a3 = st.columns(3)
-st.markdown('Formation Choice Affect on Goal Choice')
 a1.image(Image.open('WC_2022_Logo.png'))
-st.markdown('Formation Choice Affect on Goal Choice')
 a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
 # Row B1
 b1, b2, b3 = st.columns(3)
-st.markdown('Formation Choice Affect on Goal Choice')
 b1.dataframe(results)
 b2.dataframe(possession)
 b3.dataframe(formations)
@@ -121,27 +125,8 @@ c1=plost.bar_chart(
      direction='horizontal')
 
 st.markdown('Other Plot')
-c2=plost.bar_chart(
-     data=goals_by_form,
-     bar='Formation',
-     value='Goals',
-     direction='horizontal')   
+c2=plost.donut_chart(
+    data=form_freq,
+    theta='Count',
+    color='Formation')   
 
-# c1, c2 = st.columns((7,3))
-# with c1:
-#     st.markdown('### Heatmap')              # text is created with markdown
-#     plost.time_hist(                        # histogram
-#     data=seattle_weather,
-#     date='date',
-#     x_unit='week',
-#     y_unit='day',
-#     color='temp_max',
-#     aggregate='median',
-#     legend=None)
-
-# with c2:
-#     st.markdown('### Bar chart')
-#     plost.donut_chart(                      # donut charts
-#         data=stocks,
-#         theta='q2',
-#         color='company')
