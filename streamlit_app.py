@@ -109,11 +109,16 @@ b3.dataframe(formations)
 
 
 # Row C
-st.bar_chart(goals_by_form)
+plost.bar_chart(
+    data=goals_by_form,
+    bar='Formation',
+    value='Goals')
+
+
 # c1, c2 = st.columns((7,3))
 # with c1:
 #     st.markdown('### Heatmap')              # text is created with markdown
-#     plost.time_hist(                        # histogram
+    # plost.time_hist(                        # histogram
 #     data=seattle_weather,
 #     date='date',
 #     x_unit='week',
