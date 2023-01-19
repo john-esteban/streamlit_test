@@ -69,6 +69,7 @@ for i in range(4):
 
 
 matches = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
+matches['-'] = ['vs','vs','vs','vs']
 matches['Away'] = away_t
 
 results = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
