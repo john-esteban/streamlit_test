@@ -109,21 +109,21 @@ b3.dataframe(formations)
 
 
 # Row C
-c1, c2 = st.columns(2)
-with c1:
-     st.markdown('Formation Choice Affect on Goal Choice')
-     plost.bar_chart(
-     data=goals_by_form,
-     bar='Formation',
-     value='Goals',
-     direction='horizontal')
-with c2:
-     st.markdown('Other Plot')
-     plost.bar_chart(
-     data=goals_by_form,
-     bar='Formation',
-     value='Goals',
-     direction='horizontal')   
+# c1, c2 = st.columns(2)
+# with c1:
+#      st.markdown('Formation Choice Affect on Goal Choice')
+#      plost.bar_chart(
+#      data=goals_by_form,
+#      bar='Formation',
+#      value='Goals',
+#      direction='horizontal')
+# with c2:
+#      st.markdown('Other Plot')
+#      plost.bar_chart(
+#      data=goals_by_form,
+#      bar='Formation',
+#      value='Goals',
+#      direction='horizontal')   
 
 # c1, c2 = st.columns((7,3))
 # with c1:
