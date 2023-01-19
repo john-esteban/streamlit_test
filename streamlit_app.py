@@ -77,11 +77,14 @@ results['Away Score'] = away_g
 results['Away Team'] = away_t
 
 possession = pd.DataFrame({'Home Teams': home_t})
-possession['Home Score'] = home_pos
-possession['Away Score'] = away_pos
+possession['Home Posession'] = home_pos
+possession['Away Posession'] = away_pos
 possession['Away Team'] = away_t
 
-
+formations = pd.DataFrame({'Home Teams': home_t})
+formations['Home Formation'] = home_form
+formations['Away Formation'] = away_form
+formations['Away Team'] = away_t
 
 ### Here starts the web app design
 
@@ -95,14 +98,11 @@ a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
 # Row B1
-b1, b2 = st.columns(2)
+b1, b2, b3 = st.columns(3)
 b1.dataframe(results)
 b2.dataframe(possession)
+b3.dataframe(formations)
 
-# Row B2
-b3, b4 = st.columns(2)
-b3.dataframe(results)
-b4.dataframe(possession)
 
 # Row C
 c1, c2 = st.columns((7,3))
