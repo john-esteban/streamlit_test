@@ -8,7 +8,7 @@ from PIL import Image       # this package is used to put images within streamli
 from api_connection import get_data_from_api       # keep this commented if not using it otherwise brakes the app
 
 # Page setting
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
