@@ -87,8 +87,8 @@ formations['H Formation'] = home_f
 formations['A Formation'] = away_f
 formations['Away'] = away_t
 
-goals_by_form = pd.DataFrame({'Goals': goals})
-goals_by_form['Formation'] = form
+goals_by_form = pd.DataFrame({'Formation': form})
+goals_by_form['Goals'] = goals
 
 ### Here starts the web app design
 
