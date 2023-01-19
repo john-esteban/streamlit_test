@@ -109,11 +109,12 @@ a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
 # Row B1
-b1, b2, b3, b4 = st.columns(4)
+b1, b2, b3 = st.columns(3)
+st.markdown('Score, Posession, and Formation Statistics')
 b1.dataframe(results)
 b2.dataframe(possession)
 b3.dataframe(formations)
-b4.dataframe(form_freq_res)
+
 
 
 # Row C
