@@ -68,23 +68,23 @@ for i in range(4):
     away_f.append(away_form)
 
 
-matches = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
-matches['Away Teams'] = away_t
+matches = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
+matches['Away'] = away_t
 
-results = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
+results = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
 results['H Score'] = home_g
 results['A Score'] = away_g
-results['Away Team'] = away_t
+results['Away'] = away_t
 
-possession = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
+possession = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
 possession['H Posession'] = home_pos
 possession['A Posession'] = away_pos
-possession['Away Team'] = away_t
+possession['Away'] = away_t
 
-formations = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
+formations = pd.DataFrame({'Home': home_t}).reset_index(drop=True)
 formations['H Formation'] = home_form
 formations['A Formation'] = away_form
-formations['Away Team'] = away_t
+formations['Away'] = away_t
 
 ### Here starts the web app design
 
