@@ -72,18 +72,18 @@ matches = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
 matches['Away Teams'] = away_t
 
 results = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
-results['Home Score'] = home_g
-results['Away Score'] = away_g
+results['H Score'] = home_g
+results['A Score'] = away_g
 results['Away Team'] = away_t
 
 possession = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
-possession['Home Posession'] = home_pos
-possession['Away Posession'] = away_pos
+possession['H Posession'] = home_pos
+possession['A Posession'] = away_pos
 possession['Away Team'] = away_t
 
 formations = pd.DataFrame({'Home Teams': home_t}).reset_index(drop=True)
-formations['Home Formation'] = home_form
-formations['Away Formation'] = away_form
+formations['H Formation'] = home_form
+formations['A Formation'] = away_form
 formations['Away Team'] = away_t
 
 ### Here starts the web app design
