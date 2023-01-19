@@ -109,14 +109,15 @@ a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
 # Row B1
-b1, b2, b3 = st.columns(3)
+b1, b2, b3, b4 = st.columns(4)
 b1.dataframe(results)
 b2.dataframe(possession)
 b3.dataframe(formations)
+b4.dataframe(form_freq_res)
 
 
 # Row C
-c1, c2 = st.columns(2)
+c1 = st.columns(1)
 st.markdown('Formation Choice Affect on Goal Choice')
 c1=plost.bar_chart(
      data=goals_by_form,
@@ -124,8 +125,10 @@ c1=plost.bar_chart(
      value='Goals',
      direction='horizontal')
 
-st.markdown('Other Plot')
-c2=plost.donut_chart(
+# Row D
+d1 = st.columns(1) 
+st.markdown('Pie Plot')
+d1=plost.donut_chart(
     data=form_freq,
     theta='Count',
     color='Formation')   
