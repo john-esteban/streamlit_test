@@ -8,7 +8,7 @@ from PIL import Image       # this package is used to put images within streamli
 from api_connection import get_data_from_api       # keep this commented if not using it otherwise brakes the app
 
 # Page setting
-st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
 
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -87,6 +87,9 @@ formations['H Formation'] = home_f
 formations['A Formation'] = away_f
 formations['Away'] = away_t
 
+goals_by_form = pd.DataFrame({'Goals': goals})
+goals_by_form['Formation'] = form
+
 ### Here starts the web app design
 
 #Title
@@ -106,20 +109,22 @@ b3.dataframe(formations)
 
 
 # Row C
-c1, c2 = st.columns((7,3))
-with c1:
-    st.markdown('### Heatmap')              # text is created with markdown
-    plost.time_hist(                        # histogram
-    data=seattle_weather,
-    date='date',
-    x_unit='week',
-    y_unit='day',
-    color='temp_max',
-    aggregate='median',
-    legend=None)
-with c2:
-    st.markdown('### Bar chart')
-    plost.donut_chart(                      # donut charts
-        data=stocks,
-        theta='q2',
-        color='company')
+st.bar_chart(goals_by_form)
+# c1, c2 = st.columns((7,3))
+# with c1:
+#     st.markdown('### Heatmap')              # text is created with markdown
+#     plost.time_hist(                        # histogram
+#     data=seattle_weather,
+#     date='date',
+#     x_unit='week',
+#     y_unit='day',
+#     color='temp_max',
+#     aggregate='median',
+#     legend=None)
+
+# with c2:
+#     st.markdown('### Bar chart')
+#     plost.donut_chart(                      # donut charts
+#         data=stocks,
+#         theta='q2',
+#         color='company')
