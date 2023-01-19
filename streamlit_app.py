@@ -94,10 +94,13 @@ a1.image(Image.open('WC_2022_Logo.png'))
 a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
-# Home and Away performance
-b1, b2, b3, b4 = st.columns(4)
+# Row B1
+b1, b2 = st.columns(2)
 b1.dataframe(results)
 b2.dataframe(possession)
+
+# Row B2
+b3, b4 = st.columns(2)
 b3.dataframe(results)
 b4.dataframe(possession)
 
