@@ -104,13 +104,13 @@ st.title("World Cup 2022 Matchday Stats")
 
 # Row A
 a1, a2, a3 = st.columns(3)
+st.markdown('Score, Posession, and Formation Statistics')
 a1.image(Image.open('WC_2022_Logo.png'))
 a2.metric("Matchday", "December 2nd, 2022")
 a3.dataframe(matches)
 
 # Row B1
 b1, b2, b3 = st.columns(3)
-st.markdown('Score, Posession, and Formation Statistics')
 b1.dataframe(results)
 b2.dataframe(possession)
 b3.dataframe(formations)
