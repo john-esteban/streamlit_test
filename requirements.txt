@@ -4,3 +4,7 @@ plost
 requests
 matplotlib
 seaborn
+api_connection
+math
+json
+numpy
